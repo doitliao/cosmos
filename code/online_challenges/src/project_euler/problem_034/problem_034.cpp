@@ -1,11 +1,11 @@
 #include <iostream>
 #include <vector>
 
-int factorial (std::size_t n) 
-{  
-    int fact =  1;
+int factorial (std::size_t n)
+{
+    int fact = 1;
     for (std::size_t i = 1; i <= n; ++i)
-    	fact *= i;
+        fact *= i;
     return fact;
 }
 
