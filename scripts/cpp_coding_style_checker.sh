@@ -77,7 +77,7 @@ do
 
     if [ $? != 0 ]; then
         echo "# Failed: \`$COSMOS_CODE_ROOT/$cpp_file\`"
-				diff "$cpp_file" "$cpp_file.uncrustify"
+        diff "$cpp_file" "$cpp_file.uncrustify"
         error_times=$(($error_times+1))
     fi;
 done

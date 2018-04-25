@@ -1,16 +1,43 @@
 /* Part of Cosmos by OpenGenus Foundation */
 
 #include <stdio.h>
+#ifdef __linux__
+#include <stdlib.h>
+#include <pthread.h>
+#elif _WIN32
 #include <windows.h>
 #include <process.h>
+#else
+
+#endif
 
 void routine(void *a)
 {
     int n = *(int *) a;
+		#ifdef __linux__
+		sleep(n);
+		#elif _WIN32
     Sleep(n);
+		#else
+
+		#endif
     printf("%d ", n);
 }
 
+#ifdef __linux__
+void sleepSort(int arr[], int n)
+{
+	int i;
+	pthread_t * tids = new pthread_t[n];
+	for (i = 0; i < n; i++) {
+		pthread_create(&tids[i], NULL, routine, &arr[i]);
+	}
+
+	for (i = 0; i < n; i++) {
+		pthread_join(tids[i], NULL);
+	}
+}
+#elif _WIN32
 void sleepSort(int arr[], int n)
 {
     int i;
@@ -20,6 +47,7 @@ void sleepSort(int arr[], int n)
     WaitForMultipleObjects(n, threads, TRUE, INFINITE);
     return;
 }
+#endif
 
 int main()
 {
