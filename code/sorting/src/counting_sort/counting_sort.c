@@ -17,7 +17,7 @@ void countSort(char arr[])
  
     // Store count of each character
     for(i = 0; arr[i]; ++i)
-        ++count[arr[i]];
+        ++count[(unsigned)arr[i]];
  
     // Change count[i] so that count[i] now contains actual
     // position of this character in output array
@@ -27,8 +27,8 @@ void countSort(char arr[])
     // Build the output character array
     for (i = 0; arr[i]; ++i)
     {
-        output[count[arr[i]]-1] = arr[i];
-        --count[arr[i]];
+        output[count[(unsigned char)arr[i]]-1] = arr[i];
+        --count[(unsigned char)arr[i]];
     }
  
     // Copy the output array to arr, so that arr now
