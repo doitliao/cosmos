@@ -9,17 +9,6 @@
 #include <stdlib.h>    
 
 int
-main()    
-{        
-    int num[10]={1, 4, 7, 5, 9, 2, 6, 3, 8, 0};        
-    int i;            
-    bogosort(num, 10);        
-    printf("The array after sorting is:");        
-    for (i = 0;i < 10;i++) {            
-        printf("%d\n", num[i]);        
-    } printf("\n");    
-}         
-int
 is_sorted(int *a, int n)    
 {        
     while ( --n >= 1 ) {        
@@ -45,3 +34,15 @@ bogosort(int *a, int n)
     while ( !is_sorted(a, n) )             
     shuffle(a, n);    
 }
+
+int
+main()    
+{        
+    int num[10]={1, 4, 7, 5, 9, 2, 6, 3, 8, 0};        
+    int i;            
+    bogosort(num, 10);        
+    printf("The array after sorting is:");        
+    for (i = 0;i < 10;i++) {            
+        printf("%d\n", num[i]);        
+    } printf("\n");    
+}         
