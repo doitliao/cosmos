@@ -13,7 +13,7 @@ int main()
 {
     std::vector<int> factorials(10);
     constexpr std::size_t maxDigitFactorial = 2540162;
-    for (int i = 0;i < 10; ++i)
+    for (int i = 0; i < 10; ++i)
         factorials[i] = factorial(i);
     std::size_t num = 3, sum = 0;
     while (num < maxDigitFactorial)
