@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <alloc.h>
+#include <stdlib.h>
 // Part of Cosmos by OpenGenus Foundation
 struct btreenode
 {
