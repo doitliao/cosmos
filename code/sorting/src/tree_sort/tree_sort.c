@@ -11,7 +11,7 @@ struct btreenode
 void insert ( struct btreenode **, int ) ;
 void inorder ( struct btreenode * ) ;
 
-void main( )
+int main( )
 {
     struct btreenode *bt ;
     int arr[10] = { 11, 2, 9, 13, 57, 25, 17, 1, 90, 3 } ;

@@ -48,7 +48,7 @@ void display(int* number, int length){
 	printf("\n");
 }
 
-int main(int argc, char** argv){
+int main(){
 	int arr[] = {34,3212,51,52,612,456,12,31,412,123,1,3};
 	int length = 12;
 	printf("Before : ");
