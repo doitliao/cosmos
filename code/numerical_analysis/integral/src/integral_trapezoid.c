@@ -13,6 +13,10 @@ integral_trapezoid(double a, double b, double step, double (*f)(double))
     return (res);
 }
 
+double f(double x) {
+    return x * x + x;
+}
+
 int
 main(void)
 {
@@ -24,13 +28,7 @@ main(void)
     scanf("%lf", &b);
     printf("Enter integration step: ");
     scanf("%lf", &step);
-    res = integral_trapezoid(a, b, step,
-                             ({
-                                  double f(double x)
-                                  {
-                                      return x * x + x;
-                                  }
-                            f;}));
+    res = integral_trapezoid(a, b, step, f);
     printf("Result =  %lf \n", res);
     return (0);
 }
