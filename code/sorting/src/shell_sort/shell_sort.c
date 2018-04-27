@@ -36,7 +36,7 @@ int main(void)
     printf("%d ", a[i]);
   }
   shell_sort(a, 10);
-  printf("\nOut: ")
+  printf("\nOut: ");
   for(i = 0 ; i < 10 ; i++)
   {
     printf("%d ", a[i]);
