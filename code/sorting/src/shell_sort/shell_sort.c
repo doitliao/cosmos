@@ -30,7 +30,7 @@ int main(void)
   int i;
   int a[10] = { 5 , 211 , 66 , 7 , 12 , 2, 76 , 134 , 99 , 9 };
 
-  printf("In: ")
+  printf("In: ");
   for(i = 0 ; i < 10 ; i++)
   {
     printf("%d ", a[i]);
